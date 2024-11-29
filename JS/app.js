@@ -5,7 +5,6 @@ let ingresoMensual = 0;
 let sumadorGastos= 0;
 let listadoDeGastos = [ ];
 
-//Array de gastos 
 
 // constructor de gastos 
 class AgregarGastos{
@@ -39,7 +38,6 @@ function sumaTotalCuotas() {
 function eliminarGasto() {
     let nombreGasto = prompt("Ingrese el nombre del gasto que desea eliminar\n\n (En consola aparecera un listado de tus gastos)");
 
-    // Buscar el índice del gasto en el array
     let index = listadoDeGastos.findIndex(gasto => gasto.nombre === nombreGasto);
 
     if (index !== -1) {
@@ -109,7 +107,7 @@ function calculadorDeGastos() {
             listadoDeGastos.forEach(gasto => {
                 console.log(`Nombre: ${gasto.nombre}\nPrecio: ${gasto.precio}\nCuotas: ${gasto.cuotas}`);
                 });
-            eliminarGasto();  // Llamamos a la función para eliminar el gasto
+            eliminarGasto(); 
             break;
            
              break;
@@ -121,14 +119,7 @@ function calculadorDeGastos() {
         alert("Ingresaste una opcion incorrecta")
         break;
     }
-
     opciones = prompt("Su ingreso mensual es de: $"+ingresoMensual+"\n A continuacion ingrese una opcion.\n\na - Modificar ingreso mensual.\nb - Ingresar gasto mensual.\nc - Ver detalles de gastos.\nd - Ver gasto mensual total\ne - Eliminar gastos\n\n Escriba salir para detener el programa ");       
-
-
-    
-
-    
-
 }   
     
 
