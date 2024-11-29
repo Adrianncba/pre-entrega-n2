@@ -91,6 +91,7 @@ function calculadorDeGastos() {
             alert("¡Acabamos de imprimir tu detalle de gastos por consola!")
             break; 
         case "d":
+            alert("Tu gasto mensual ha sido impreso en consola!")
             console.log("Este es tu ingreso mensual $"+ingresoMensual);
             console.log("===========================================");
             sumaTotalCuotas();
